@@ -4,53 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/game.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+
     <title>project mineSweeper</title>
   </head>
-  <h1>mineSweeper</h1>
   <body onload="onInit()">
-    <!-- <h2>Score: <span>0</span></h2> -->
-    <h2><span>3</span> Lives Left<span class="smiley">😑</span></h2>
-    <div class="menu">
-      <!-- <button onclick="resetGameState()">restart</button> -->
-      <button
-        class="diffLevelCheck"
-        onclick="difficultyBtnChecker(this)"
-        data-boardSize="4"
-        data-mines="2"
-      >
-        easy
-      </button>
-      <button
-        class="diffLevelCheck"
-        onclick="difficultyBtnChecker(this)"
-        data-boardSize="8"
-        data-mines="14"
-      >
-        medium
-      </button>
-      <button
-        class="diffLevelCheck"
-        onclick="difficultyBtnChecker(this)"
-        data-boardSize="12"
-        data-mines="32"
-      >
-        hard
-      </button>
+    <div class="main-container">
+      <h1>mineSweeper</h1>
+      <div class="image-container">
+        <span>
+          AG Dev Lab:<br /><a
+            href="https://agdevlab.github.io/MineSweeper-ver2/"
+            >Github Pages</a
+          >
+        </span>
+      </div>
+      <!-- <h2>Score: <span>0</span></h2> -->
+      <h2><span>3</span> Lives Left<span class="smiley">😑</span></h2>
+      <div class="menu">
+        <!-- <button onclick="resetGameState()">restart</button> -->
+        <button
+          class="diffLevelCheck"
+          onclick="difficultyBtnChecker(this)"
+          data-boardSize="4"
+          data-mines="2"
+        >
+          easy
+        </button>
+        <button
+          class="diffLevelCheck"
+          onclick="difficultyBtnChecker(this)"
+          data-boardSize="8"
+          data-mines="14"
+        >
+          medium
+        </button>
+        <button
+          class="diffLevelCheck"
+          onclick="difficultyBtnChecker(this)"
+          data-boardSize="12"
+          data-mines="32"
+        >
+          hard
+        </button>
+      </div>
+
+      <table class="board-container">
+        <tbody class="board"></tbody>
+      </table>
+      <table>
+        <tr>
+          <td><button onclick="toggleVisibility()">checkBoard</button></td>
+        </tr>
+      </table>
+
+      <button onclick="resetGame()">Restart</button>
+      <footer>Created by Amit Gal</footer>
     </div>
-
-    <table class="board-container">
-      <tbody class="board"></tbody>
-    </table>
-    <table>
-      <tr>
-        <td><button onclick="toggleVisibility()">checkBoard</button></td>
-      </tr>
-    </table>
-
-    <button onclick="resetGame()">Restart</button>
     <script src="js/genUseFuncs.js"></script>
     <script src="js/game.js"></script>
     <script src="js/mine.js"></script>
+    <script src="js/modal.js"></script>
   </body>
-  <footer>Created by Amit Gal</footer>
 </html>
